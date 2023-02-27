@@ -1,4 +1,4 @@
-# Scrapy settings for companies project
+# Scrapy settings for ycombinator project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,19 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "companies"
+# from datetime import datetime
 
-SPIDER_MODULES = ["companies.spiders"]
-NEWSPIDER_MODULE = "companies.spiders"
+# now = datetime.now().strftime('%Y%m%d%H%M')
+# Logging
+# LOG_LEVEL = 'INFO'
+# LOG_FILE = f'./logs/{now}.log'
 
+BOT_NAME = "YCombinatorScraper"
+SPIDER_MODULES = ["ycombinator.spiders"]
+NEWSPIDER_MODULE = "ycombinator.spiders"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "companies (+http://www.yourdomain.com)"
+#USER_AGENT = "YCombinatorScraper (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -31,7 +36,7 @@ ROBOTSTXT_OBEY = True
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -68,11 +73,11 @@ ROBOTSTXT_OBEY = True
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
-#AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_ENABLED = True
 # The initial download delay
-#AUTOTHROTTLE_START_DELAY = 5
+AUTOTHROTTLE_START_DELAY = 5
 # The maximum download delay to be set in case of high latencies
-#AUTOTHROTTLE_MAX_DELAY = 60
+AUTOTHROTTLE_MAX_DELAY = 60
 # The average number of requests Scrapy should be sending in parallel to
 # each remote server
 #AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
