@@ -11,7 +11,7 @@ from tqdm import tqdm
 def make_driver():
     """Creates headless Firefox WebDriver instance."""
     firefox_options = Options()
-    firefox_options.headless = True
+    firefox_options.add_argument('-headless')
     return Firefox(options=firefox_options)
 
 
