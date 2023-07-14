@@ -4,6 +4,23 @@ I built YC-Scraper to create a dataset of all the companies in the [Y Combinator
 ## About Y Combinator
 Y Combinator is a startup accelerator that has invested in over 4,000 companies that have a combined valuation of over $600B. The overall goal of Y Combinator is to help startups really take off.
 
+## Requirements
+- pandas
+- python
+- scrapy
+- selenium
+- tqdm
+
+## Usage
+1. Clone this repository
+2. Move to the `yc-scraper` directory
+3. Run `python yc_links_extractor.py`. This will fetch the individual urls for the spider to crawl.
+4. Run `scrapy runspider scrapy-project/spiders/yscraper.py -o output.jl`. This generate a JSON lines file which you can read with Pandas:
+
+```python
+df = pd.read_json('yc-scraper/output.jl', lines=True)
+```
+
 ## Dataset
 Check out the dataset I published on [Kaggle.com](https://www.kaggle.com/datasets/miguelcorraljr/y-combinator-directory).
 
