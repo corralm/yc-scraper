@@ -8,8 +8,9 @@ Y Combinator is a startup accelerator that has invested in over 4,000 companies 
 
 ## Requirements
 
+- python - 3.11.5
+
 - pandas
-- python
 - scrapy
 - selenium
 - tqdm
