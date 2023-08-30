@@ -5,3 +5,7 @@
 *.html
 *.pyc
 geckodriver.log
+
+# Output files
+output.jl
+start_urls.txt
