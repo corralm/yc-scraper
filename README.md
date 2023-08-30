@@ -1,10 +1,13 @@
 # Y Combinator Directory Scraper
+
 I built YC-Scraper to create a dataset of all the companies in the [Y Combinator directory](https://www.ycombinator.com/companies/). In this directory, you can search for companies by industry, region, company size, and more. 
 
 ## About Y Combinator
+
 Y Combinator is a startup accelerator that has invested in over 4,000 companies that have a combined valuation of over $600B. The overall goal of Y Combinator is to help startups really take off.
 
 ## Requirements
+
 - pandas
 - python
 - scrapy
@@ -12,6 +15,7 @@ Y Combinator is a startup accelerator that has invested in over 4,000 companies 
 - tqdm
 
 ## Usage
+
 1. Clone this repository
 1. Move to the `yc-scraper` directory
 1. Run `python yc_links_extractor.py`. This will fetch the individual urls for the spider to crawl.
@@ -24,9 +28,11 @@ df = pd.read_json('yc-scraper/output.jl', lines=True)
 ```
 
 ## Dataset
+
 Check out the dataset I published on [Kaggle.com](https://www.kaggle.com/datasets/miguelcorraljr/y-combinator-directory).
 
 ## Attributes
+
 |  Attribute           |  Description | Data Type  |
 |-----------------------|---|---|
 | company_id            | Company id provided by YC  | int  |
@@ -47,6 +53,7 @@ Check out the dataset I published on [Kaggle.com](https://www.kaggle.com/dataset
 | linkedin_url          | Company LinkedIn url  | string  |
 
 ## Sample Data
+
 Note: I excluded 'short_description', 'long_description', 'cb_url', and 'linkedin_url'  in the sample data for brevity.
 
 | company_id | company_name | short_description                         | batch | status   | tags                                                      | location      | country | year_founded | num_founders | founders_names                                       | team_size | website                  |   |
@@ -59,9 +66,10 @@ Note: I excluded 'short_description', 'long_description', 'cb_url', and 'linkedi
 | 531        | DoorDash     | Restaurant delivery.                      | S13   | Public   | ['E-commerce', 'Marketplace']                             | San Francisco | US      | 2013         | 3            | ['Andy Fang', 'Stanley Tang', 'Tony Xu']             | 8600      | http://doordash.com      |   |
 
 ## Meta
-Author: Miguel Corral Jr.  
-Email: corraljrmiguel@gmail.com  
-LinkedIn: https://www.linkedin.com/in/imiguel  
+
+Author: Miguel Corral Jr.
+Email: corraljrmiguel@gmail.com
+LinkedIn: https://www.linkedin.com/in/imiguel
 GitHub: https://github.com/corralm
 
 Distributed under the MIT license. See [LICENSE](./LICENSE) for more information.
