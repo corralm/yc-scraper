@@ -13,9 +13,11 @@ Y Combinator is a startup accelerator that has invested in over 4,000 companies 
 
 ## Usage
 1. Clone this repository
-2. Move to the `yc-scraper` directory
-3. Run `python yc_links_extractor.py`. This will fetch the individual urls for the spider to crawl.
-4. Run `scrapy runspider scrapy-project/spiders/yscraper.py -o output.jl`. This generate a JSON lines file which you can read with Pandas:
+1. Move to the `yc-scraper` directory
+1. Run `python yc_links_extractor.py`. This will fetch the individual urls for the spider to crawl.
+1. Run `cp start_urls.txt scrapy-project/ycombionator/`
+    - This copies the start URLs generated in the previous step for usage by the scraper
+1. Run `scrapy runspider scrapy-project/ycombinator/spiders/yscraper.py -o output.jl`. This generate a JSON lines file which you can read with Pandas:
 
 ```python
 df = pd.read_json('yc-scraper/output.jl', lines=True)
