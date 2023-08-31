@@ -72,7 +72,7 @@ def fetch_url_paths():
 
 def write_urls_to_file(ul: list):
     """Appends a list of company urls to a file."""
-    with open('start_urls.txt', 'w') as f:
+    with open('./scrapy-project/ycombinator/start_urls.txt', 'w') as f:
         json.dump(ul, f)
 
 
