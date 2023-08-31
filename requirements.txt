@@ -1,5 +1,5 @@
-pandas
-python
-scrapy
-selenium
-tqdm
+pandas==2.1.0
+python==3.11
+scrapy==2.10.1
+selenium==4.11.2
+tqdm==4.66.1
