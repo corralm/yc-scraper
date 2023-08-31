@@ -22,7 +22,7 @@ Y Combinator is a startup accelerator that has invested in over 4,000 companies 
 4. Run `scrapy runspider scrapy-project/spiders/yscraper.py -o output.jl`. This generate a JSON lines file which you can read with Pandas:
 
 ```python
-df = pd.read_json('yc-scraper/output.jl', lines=True)
+df = pd.read_json('./output.jl', lines=True)
 ```
 
 ## Dataset
