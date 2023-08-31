@@ -8,11 +8,14 @@ Y Combinator is a startup accelerator that has invested in over 4,000 companies 
 
 ## Requirements
 
-- pandas
-- python
-- scrapy
-- selenium
-- tqdm
+You'll need to have Firefox and [geckodriver](https://github.com/mozilla/geckodriver/releases) installed. You can install `geckodriver` by running `brew install geckodriver`.
+
+Python packages include:
+
+- [Scrapy](https://scrapy.org)
+- [Selenium](https://www.selenium.dev/documentation/)
+- [tqdm](https://tqdm.github.io)
+- [Pandas](https://pandas.pydata.org) (optional)
 
 ## Usage
 
