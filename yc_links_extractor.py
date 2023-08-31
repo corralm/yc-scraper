@@ -26,6 +26,7 @@ def get_page_source():
 
 def click_see_all_options():
     """Clicks 'See all options' button to load checkboxes for all batches."""
+    sleep(3)
     see_all_options = driver.find_element(By.LINK_TEXT, 'See all options')
     see_all_options.click()
 
