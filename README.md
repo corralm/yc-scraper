@@ -22,7 +22,7 @@ Python packages include:
 1. Clone this repository
 2. Move to the `yc-scraper` directory
 3. Run `python yc_links_extractor.py`. This will fetch the individual urls for the spider to crawl.
-4. Run `scrapy runspider scrapy-project/spiders/yscraper.py -o output.jl`. This generate a JSON lines file which you can read with Pandas:
+4. Run `scrapy runspider scrapy-project/ycombinator/spiders/yscraper.py -o output.jl`. This generate a JSON lines file which you can read with Pandas:
 
 ```python
 df = pd.read_json('./output.jl', lines=True)
