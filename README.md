@@ -25,6 +25,7 @@ Python packages include:
 4. Run `scrapy runspider scrapy-project/ycombinator/spiders/yscraper.py -o output.jl`. This generates a JSON lines file which you can read with Pandas:
 
 ```python
+import pandas as pd
 df = pd.read_json('./output.jl', lines=True)
 ```
 
