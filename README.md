@@ -1,6 +1,6 @@
 # Y Combinator Directory Scraper
 
-I built YC-Scraper to create a dataset of all the companies in the [Y Combinator directory](https://www.ycombinator.com/companies/). In this directory, you can search for companies by industry, region, company size, and more.
+I built YC-Scraper to create a dataset of all the companies in the [Y Combinator directory](https://www.ycombinator.com/companies/). You can search for companies by industry, region, company size, and more in this directory.
 
 ## About Y Combinator
 
@@ -8,7 +8,7 @@ Y Combinator is a startup accelerator that has invested in over 4,000 companies 
 
 ## Requirements
 
-You'll need to have Firefox and [geckodriver](https://github.com/mozilla/geckodriver/releases) installed. You can install `geckodriver` by running `brew install geckodriver`.
+You must have [Firefox](https://www.mozilla.org/en-US/firefox/new/) and [geckodriver](https://github.com/mozilla/geckodriver/releases) installed. You can install `geckodriver` by running `brew install geckodriver`.
 
 Python packages include:
 
@@ -21,8 +21,8 @@ Python packages include:
 
 1. Clone this repository
 2. Move to the `yc-scraper` directory
-3. Run `python yc_links_extractor.py`. This will fetch the individual urls for the spider to crawl.
-4. Run `scrapy runspider scrapy-project/ycombinator/spiders/yscraper.py -o output.jl`. This generate a JSON lines file which you can read with Pandas:
+3. Run `python yc_links_extractor.py`. This will fetch the individual URLs for the spider to crawl.
+4. Run `scrapy runspider scrapy-project/ycombinator/spiders/yscraper.py -o output.jl`. This generates a JSON lines file which you can read with Pandas:
 
 ```python
 df = pd.read_json('./output.jl', lines=True)
@@ -38,7 +38,7 @@ Check out the dataset I published on [Kaggle.com](https://www.kaggle.com/dataset
 |-----------------------|---|---|
 | company_id            | Company id provided by YC  | int  |
 | company_name          | Company name  | string  |
-| short_description     | One line description of the company  | string  |
+| short_description     | One-line description of the company  | string  |
 | long_description      | Long description of the company  | string  |
 | batch                 | Batch name provided by YC  | string  |
 | status                | Company status  | string  |
