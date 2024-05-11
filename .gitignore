@@ -4,6 +4,7 @@
 .vscode
 *.html
 *.pyc
+*ipynb
 geckodriver.log
 
 # Output files
