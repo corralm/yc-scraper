@@ -21,6 +21,7 @@ Python packages include:
 
 1. Clone this repository
 2. Move to the `yc-scraper` directory
+    2. [Optional] Create an environment for `yc-scraper` (for example by ```conda create --name <env_name> --file requirements.txt```)
 3. Run `python yc_links_extractor.py`. This will fetch the individual URLs for the spider to crawl.
 4. Run `scrapy runspider scrapy-project/ycombinator/spiders/yscraper.py -o output.jl`. This generates a JSON lines file which you can read with Pandas:
 
