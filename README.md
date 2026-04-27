@@ -1,7 +1,7 @@
 # Y Combinator Directory Scraper
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
 A Python scraper for extracting company data from the [Y Combinator directory](https://www.ycombinator.com/companies/), featuring an interactive web-based explorer.
 
@@ -20,7 +20,7 @@ Y Combinator is a startup accelerator that has invested in over 4,000 companies 
 
 ## Requirements
 
-- **Python**: 3.11 or higher
+- **Python**: 3.10 or higher
 - **Browser**: [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - **WebDriver**: [geckodriver](https://github.com/mozilla/geckodriver/releases)
 
@@ -57,7 +57,7 @@ Download from [GitHub releases](https://github.com/mozilla/geckodriver/releases)
 
 3. **Install dependencies**
    ```bash
-   pip install -r requirements.txt
+   python -m pip install -r requirements.txt
    ```
 
 ## Usage
@@ -70,7 +70,7 @@ python yc_links_extractor.py
 
 # Step 2: Scrape company data
 cd scrapy-project
-scrapy runspider ycombinator/spiders/yscraper.py -o output.jl
+python -m scrapy runspider ycombinator/spiders/yscraper.py -o output.jl
 
 # Step 3: Analyze data with Pandas
 python -c "import pandas as pd; df = pd.read_json('output.jl', lines=True); print(df.head())"
@@ -92,7 +92,7 @@ This script:
 
 ```bash
 cd scrapy-project
-scrapy runspider ycombinator/spiders/yscraper.py -o output.jl
+python -m scrapy runspider ycombinator/spiders/yscraper.py -o output.jl
 ```
 
 **Supported output formats**:
@@ -189,6 +189,19 @@ geckodriver --version     # Verify installation
 **Issue**: `FileNotFoundError: Start URLs file not found`
 
 **Solution**: Run `python yc_links_extractor.py` first to generate the URLs file.
+
+---
+
+**Issue**: `ModuleNotFoundError: No module named 'pkg_resources'` when running `scrapy`
+
+**Solution**: Run Scrapy through the active Python environment instead of a shell-resolved executable:
+
+```bash
+cd scrapy-project
+python -m scrapy runspider ycombinator/spiders/yscraper.py -o output.jl
+```
+
+If you use Conda and `which scrapy` points to an Anaconda path while your virtualenv is active, reinstall with `python -m pip install -r requirements.txt` and keep using `python -m scrapy`.
 
 ---
 

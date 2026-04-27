@@ -1,10 +1,11 @@
 # YC Scraper Dependencies
-# Compatible with Python 3.11, 3.12, and 3.13
+# Compatible with Python 3.10, 3.11, 3.12, and 3.13
 
 # Core scraping dependencies
 scrapy==2.11.2
 selenium==4.15.2
 tqdm==4.66.4
+setuptools>=65.5.0  # Provides pkg_resources used by Scrapy 2.11.x
 
 # Data analysis (optional - use pandas>=2.2.0 for Python 3.13 support)
 pandas>=2.2.0
